@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数量自增的按钮</title>
+</head>
+<body>
+    <div id="text">点击下方按钮，数字增加</div>
+    <button onclick="add_number()">点我</button>
+</body>
+<script>
+    let i =0;
+    function add_number() {
+        i++;
+        document.getElementById("text").innerHTML=i.toString();
+    }
+</script>
+</html>
