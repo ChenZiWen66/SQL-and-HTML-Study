@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示接收的数据</title>
+</head>
+<body>
+<ol id="list">
+    <li>用户名:<span id="username"></span></li>
+    <li>密&nbsp&nbsp&nbsp码:<span id="password"></span></li>
+</ol>
+</body>
+<script>
+    <!--  获取接收到的数据,将数据显示在页面中  -->
+    let xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState===4 && xmlhttp.status===200)
+        {
+            //获取JSON
+            let str=xmlhttp.responseText;
+            //用eval方式获取JSON中数据
+            let a=eval('('+str+')');
+            document.getElementById("username").innerHTML=a.username;
+
+            //用JSON.parse获取JSON中数据
+            let b=JSON.parse(str)
+            document.getElementById("password").innerHTML=b.password;
+        }
+    };
+    xmlhttp.open("GET","http://localhost:9000/getdata",true);
+    // xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send();
+    // document.getElementById("username").innerHTML=xmlhttp.responseText;
+</script>
+</html>
