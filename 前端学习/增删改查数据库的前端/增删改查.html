@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增删改查</title>
+</head>
+<body>
+<table id="User" border="2">
+    <tr>
+        <th>用户名</th>
+        <th>密码</th>
+    </tr>
+    <tr>
+        <td>czw</td>
+        <td>12345</td>
+    </tr>
+</table>
+</body>
+<script>
+    let xmlhttp=new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState===4 && xmlhttp.status===200)
+        {
+            //获取JSON
+            let str=xmlhttp.responseText;
+            let userdata=JSON.parse(str);
+            // document.getElementById("User").innerHTML+="<tr><td>"+str+"</td><td>"+str+"</td></tr>";
+            // document.getElementById("User").innerHTML+="<tr><td>"+userdata[0].username+"</td><td>"+userdata[1].password+"</td></tr>";
+            for(let i=0;i<userdata.length;i++){
+                document.getElementById("User").innerHTML+="<tr><td>"+userdata[i].username+"</td><td>"+userdata[i].password+"</td></tr>";
+            }
+
+        }
+    };
+    xmlhttp.open("GET","http://localhost:9002/crud/show",true);
+    // xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xmlhttp.send();
+</script>
+</html>

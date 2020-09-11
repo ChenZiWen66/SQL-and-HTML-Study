@@ -1,0 +1,14 @@
+show tables ;
+select * from user;
+desc user;
+insert into user(username, password) VALUE ("user1","password1");
+insert into user(username, password) VALUE ("user2","password2");
+insert into user(username, password) VALUE ("user3","password3");
+insert into user(username, password) VALUE ("user4","password4");
+insert into user(username, password) VALUE ("user5","password5");
+insert into user(username, password) VALUE ("user6","password6");
+insert into user(username, password) VALUE ("user7","password7");
+insert into user(username, password) VALUE ("user8","password8");
+insert into user(username, password) VALUE ("user9","password9");
+insert into user(username, password) VALUE ("user10","password10");
+insert into user(username, password) VALUE ("user11","password11");
