@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="uploadfile" />
         <module name="crudproject" />
+        <module name="split-file-upload" />
         <module name="simpleproject" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="crudproject" target="1.8" />
       <module name="simpleproject" target="1.8" />
+      <module name="split-file-upload" target="1.8" />
       <module name="uploadfile" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -21,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="crudproject" options="-parameters" />
       <module name="simpleproject" options="-parameters" />
+      <module name="split-file-upload" options="-parameters" />
       <module name="uploadfile" options="-parameters" />
     </option>
   </component>
