@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/SQL-and-HTML-Study.iml" filepath="$PROJECT_DIR$/SQL-and-HTML-Study.iml" />
       <module fileurl="file://$PROJECT_DIR$/crudproject/crudproject.iml" filepath="$PROJECT_DIR$/crudproject/crudproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/simpleproject/simpleproject.iml" filepath="$PROJECT_DIR$/simpleproject/simpleproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploadfile/uploadfile.iml" filepath="$PROJECT_DIR$/uploadfile/uploadfile.iml" />
     </modules>
   </component>
 </project>
