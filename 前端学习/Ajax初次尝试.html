@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax初次尝试(axios)</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+</head>
+<body>
+<div id="app">
+    {{ value }}
+</div>
+<script type="text/javascript">
+    new Vue({
+        el:"#app",
+        data:{
+           value:null
+        },
+        mounted(){
+            axios({
+                method:"get",
+                url:"http://localhost:9002/crud/show"
+            })
+                .then(response=>{
+                    this.value=response.data
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+        }
+    })
+</script>
+</body>
+</html>
