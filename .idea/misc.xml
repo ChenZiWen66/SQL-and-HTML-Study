@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/crudproject/pom.xml" />
         <option value="$PROJECT_DIR$/uploadfile/pom.xml" />
         <option value="$PROJECT_DIR$/split-file-upload/pom.xml" />
+        <option value="$PROJECT_DIR$/user-login-and-regist/pom.xml" />
       </list>
     </option>
   </component>

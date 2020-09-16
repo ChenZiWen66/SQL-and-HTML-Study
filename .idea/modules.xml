@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/simpleproject/simpleproject.iml" filepath="$PROJECT_DIR$/simpleproject/simpleproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/split-file-upload/split-file-upload.iml" filepath="$PROJECT_DIR$/split-file-upload/split-file-upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/uploadfile/uploadfile.iml" filepath="$PROJECT_DIR$/uploadfile/uploadfile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-login-and-regist/user-login-and-regist.iml" filepath="$PROJECT_DIR$/user-login-and-regist/user-login-and-regist.iml" />
     </modules>
   </component>
 </project>
