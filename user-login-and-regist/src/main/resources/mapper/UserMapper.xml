@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.czw.userloginandregist.mapper.UserMapper">
+
+    <select id="loginVerify" resultType="com.czw.userloginandregist.entity.response.LoginResponse"
+            parameterType="com.czw.userloginandregist.entity.request.LoginRequest">
+        select username, password
+        from user
+        where username = #{userName,jdbcType=VARCHAR}
+          and password = #{password,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="register" parameterType="com.czw.userloginandregist.entity.request.RegisterRequest">
+        insert into user(username, password) VALUE ( #{userName}, #{password})
+    </insert>
+</mapper>

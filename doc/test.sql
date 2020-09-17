@@ -12,3 +12,7 @@ insert into user(username, password) VALUE ("czw8","passw8");
 insert into user(username, password) VALUE ("czw9","passw9");
 insert into user(username, password) VALUE ("czw10","passd10");
 insert into user(username, password) VALUE ("czw11","passd11");
+
+select username,password
+from user
+where username='czw1'&&password='passw1';
