@@ -5,7 +5,7 @@ import com.czw.userloginandregist.entity.request.RegisterRequest;
 import com.czw.userloginandregist.entity.response.LoginResponse;
 
 public interface UserMapper {
-    public LoginResponse loginVerify(LoginRequest loginRequest);
+    LoginResponse loginVerify(LoginRequest loginRequest);
 
-    public int register(RegisterRequest registerRequest);
+    int register(RegisterRequest registerRequest);
 }

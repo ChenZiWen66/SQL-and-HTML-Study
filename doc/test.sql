@@ -16,3 +16,5 @@ insert into user(username, password) VALUE ("czw11","passd11");
 select username,password
 from user
 where username='czw1'&&password='passw1';
+
+select * from user limit 0,10;

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.czw.crudproject.mapper.CRUDMapper">
 
-    <select id="selectUser" resultType="com.czw.crudproject.entity.UserEntity">
-        select * from user
+    <select id="selectUser" resultType="com.czw.crudproject.entity.UserEntity" parameterType="integer">
+        select * from user limit #{startIndex},#{pageSize}
     </select>
 </mapper>

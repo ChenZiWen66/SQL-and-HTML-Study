@@ -5,5 +5,5 @@ import java.util.List;
 
 
 public interface CRUDMapper {
-    List<UserEntity> selectUser();
+    List<UserEntity> selectUser(Integer startIndex,Integer pageSize);
 }
