@@ -7,10 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -22,7 +19,6 @@ public class CRUDController {
     @Autowired
     private CRUDService crudService;
 
-
     /**
      * 查询用户表
      * @return
@@ -30,8 +26,8 @@ public class CRUDController {
     @PostMapping("/show")
     @ResponseBody
     @CrossOrigin
-    public List<ShowUserResponse> showUser(ShowUserRequest showUserRequest){
-        LOG.info("开始");
+    public List<ShowUserResponse> showUser(@RequestBody ShowUserRequest showUserRequest){
+        LOG.info("开始,当前页面{},页面大小{}",showUserRequest.getCurrentPage(),showUserRequest.getPageSize());
         return crudService.show(showUserRequest);
     }
 }
